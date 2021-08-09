@@ -1,0 +1,85 @@
+html, body {
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	font-family: Ubuntu;
+	display: flex;
+}
+
+#parent {
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 1px 1px black;
+	border-radius: 10px;
+	width: 450px;
+	height: 95%;
+	margin: auto;
+}
+
+#title {
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#messages {
+	height: 80%;
+	overflow-y: scroll;
+	scrollbar-width: none;
+}
+
+#inputs {
+	height: 10%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+h1, p {
+	margin: 0;
+}
+
+h1 {
+	color: orange;
+	/*font-size: 350%;*/
+}
+
+p {
+	/*font-size: 200%;*/
+	background-color: lightgreen;
+	width: 70%;
+	padding: 2% 4% 2% 4%;
+	border-radius: 5px;
+	margin: 4%;
+}
+
+input, button {
+	/*font-size: 200%;*/
+	border: none;
+	border-radius: 5px;
+}
+
+input {
+	width: 70%;
+	height: 50%;
+	padding: 0 2% 0 2%;
+	box-shadow: 0 0 1px 1px black;
+}
+
+button {
+	width: 20%;
+	height: 50%;
+	background-color: green;
+	color: white;
+}
+
+button:hover {
+	background-color: darkgreen;
+}
+
+button:active {
+	box-shadow: 0 0 3px 1px darkgreen;
+}

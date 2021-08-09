@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Chatting</title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+	<div id="parent">
+		<div id="title">
+			<h1>Chatting room</h1>
+		</div>
+		<div id="messages"></div>
+		<div id="inputs">
+			<input type="text" placeholder="Message...">
+			<button onclick="send()">SEND</button>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
