@@ -1,85 +1,100 @@
-html, body {
+* {
 	margin: 0;
-	height: 100%;
+	padding: 0;
+	border: 0;
 }
+*, *:before, *:after {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+:focus, :active, a:focus, a:active {outline: none;}
+nav, footer, header, aside {display: block;}
+html, body {
+	height: 100%;
+	width: 100%;
+	line-height: 1;
+  font-size: 14px;
+}
+input, button, textarea {font-family: inherit;}
+button {cursor: pointer;}
+a, a:visited {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top}
+h1, h2, h3, h4, h5, h6 {font-weight: 400;font-size: inherit;}
 
 body {
-	font-family: Ubuntu;
-	display: flex;
+	font-family: Arial;
 }
 
-#parent {
-	display: flex;
-	flex-direction: column;
-	box-shadow: 0 0 1px 1px black;
-	border-radius: 10px;
-	width: 450px;
-	height: 95%;
-	margin: auto;
-}
-
-#title {
-	height: 10%;
+.wrapper {
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-#messages {
-	height: 80%;
-	overflow-y: scroll;
-	scrollbar-width: none;
-}
-
-#inputs {
-	height: 10%;
+.container {
+	flex: 0 1 90%;
+	height: 90%;
+	border: 1px solid black;
+	border-radius: 10px;
 	display: flex;
-	justify-content: space-evenly;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
+	padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1366 - 320)));
 }
 
-h1, p {
-	margin: 0;
-}
-
-h1 {
+.container__title {
+	width: 100%;
+	flex: 0 0 calc(50px + (100 - 50) * ((100vw - 320px) / (1366 - 320)));
+	font-size: calc(25px + (50 - 25) * ((100vw - 320px) / (1366 - 320)));
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: orange;
-	/*font-size: 350%;*/
+}
+
+.container__messages {
+	flex: 1 1 auto;
+	width: 100%;
+	overflow-y: auto;
 }
 
 p {
-	/*font-size: 200%;*/
-	background-color: lightgreen;
 	width: 70%;
-	padding: 2% 4% 2% 4%;
+	border-radius: 10px;
+	font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1366 - 320)));
+	padding: 10px;
+	background-color: lightseagreen;
+	margin: calc(10px + (20 - 10) * ((100vw - 320px) / (1366 - 320))) 0;
+	margin-left: 10px;
+}
+
+.container__inputs {
+	flex: 0 0 50px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.input, .button {
+	font-size: calc(15px + (25 - 15) * ((100vw - 320px) / (1366 - 320)));
+	border: 1px solid black;
 	border-radius: 5px;
-	margin: 4%;
+	padding: 10px;
 }
 
-input, button {
-	/*font-size: 200%;*/
-	border: none;
-	border-radius: 5px;
+.input {
+	flex: 0 1 70%;
 }
 
-input {
-	width: 70%;
-	height: 50%;
-	padding: 0 2% 0 2%;
-	box-shadow: 0 0 1px 1px black;
-}
-
-button {
-	width: 20%;
-	height: 50%;
+.button {
+	background: none;
+	flex: 0 1 25%;
 	background-color: green;
 	color: white;
-}
-
-button:hover {
-	background-color: darkgreen;
-}
-
-button:active {
-	box-shadow: 0 0 3px 1px darkgreen;
 }

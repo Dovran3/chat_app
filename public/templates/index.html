@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<title>Chatting</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<title>Chatting</title>
 </head>
+
 <body>
-	<div id="parent">
-		<div id="title">
-			<h1>Chatting room</h1>
-		</div>
-		<div id="messages"></div>
-		<div id="inputs">
-			<input type="text" placeholder="Message...">
-			<button onclick="send()">SEND</button>
+	<div class="wrapper">
+		<div class="container">
+			<div class="container__title">Chatting room</div>
+			<div class="container__messages"></div>
+			<div class="container__inputs">
+				<input type="text" class="input" placeholder="Message...">
+				<button class="button" onclick="send()">SEND</button>
+			</div>
 		</div>
 	</div>
 
 	<script type="text/javascript" src="../socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
 </body>
+
 </html>
